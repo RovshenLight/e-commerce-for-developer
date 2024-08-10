@@ -34,7 +34,6 @@ Before run this App you should past it in Second Terminl( VSCode ). <br />
 <div align="center">
 <img src="https://raw.githubusercontent.com/RovshenLight/RovshenLight/output/snake.svg" align="center" style="width: 100%" />
 </div>
-###
 
 ---
 [![](https://visitcount.itsvg.in/api?id=RovshenLight&icon=10&color=13)](https://visitcount.itsvg.in)
