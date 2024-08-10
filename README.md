@@ -19,6 +19,12 @@ If you user, you can look preview ( ( https://rovshenlight.github.io/e-commerce-
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=gruvbox)
 
+###
+
+<img src="https://raw.githubusercontent.com/RovshenLight/RovshenLight/output/snake.svg" alt="Snake animation" />
+
+###
+
 ---
 [![](https://visitcount.itsvg.in/api?id=RovshenLight&icon=10&color=13)](https://visitcount.itsvg.in)
 
