@@ -10,6 +10,7 @@ import { login } from './basketRedax/userRedux';
 import Cookies from 'js-cookie';
 import { useEffect } from 'react';
 import Card from './pages/card/Card'
+import NotFound from './pages/notfound/NotFound';
 
 function App() {
 
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route path='/Regist'>
           {isAuthenticated ? <Redirect to='/' /> : <Regist />}
+          </Route>
+          <Route path='*'>
+            <NotFound />
           </Route>
         </Switch>
       </Router>
