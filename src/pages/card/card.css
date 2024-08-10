@@ -1,0 +1,294 @@
+.layer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(300deg, lightblue, violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  padding: 3em;
+  border-radius: 1em;
+  perspective: 800px;
+}
+
+.credit-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.credit-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.6));
+  border-radius: 1em;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  padding: 1em;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.branding img {
+  width: 40px;
+  height: auto;
+}
+
+.card-back {
+  position: absolute;
+  transform: rotateY(180deg);
+  padding: 1em;
+}
+
+.card-number {
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-top: 3em;
+  width: 100%;
+}
+
+.details {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  font-size: 0.8em;
+}
+
+.details span {
+  display: block;
+}
+
+.details #card-holder-name {
+  text-transform: uppercase;
+}
+
+.card-back .black-strip {
+  position: relative;
+  background-color: #000000;
+  height: 50px;
+  top: 2em;
+}
+
+.card-back .white-strip {
+  top: 3em;
+  position: relative;
+  text-align: right;
+}
+
+.card-back .white-strip span {
+  margin-right: 1em;
+}
+
+.card-back .white-strip div {
+  height: 30px;
+  background-color: #ffffff;
+  margin-top: 0.5em;
+}
+
+.card-back .visa-logo {
+  position: absolute;
+  width: 40px;
+  margin-top: 4em;
+  right: 1em;
+}
+
+.wrapper form {
+  margin-top: 5em;
+}
+
+.wrapper form label,
+.wrapper form label input {
+  display: block;
+}
+
+.wrapper form label {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.wrapper input {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 1em 0.5em;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.wrapper input:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.wrapper form .date-cvv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper button {
+  display: inline-block;
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.7rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 500;
+}
+
+.wrapper button:hover {
+  background: linear-gradient(300deg, lightblue, violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: #f2d74e;
+  animation: confetti 5s ease-in-out forwards;
+}
+
+.confetti:nth-child(1) { background-color: lightgreen; }
+.confetti:nth-child(2) { background-color: lightslategrey; }
+.confetti:nth-child(3) { background-color: lightcoral; }
+.confetti:nth-child(4) { background-color: lightpink; }
+.confetti:nth-child(5) { background-color: lightseagreen; }
+.confetti:nth-child(6) { background-color: lightyellow; }
+.confetti:nth-child(7) { background-color: lightskyblue; }
+.confetti:nth-child(8) { background-color: #95c3de; }
+.confetti:nth-child(9) { background-color: #ff9a91; }
+.confetti:nth-child(10) { background-color: #f2d74e; }
+
+@keyframes confetti {
+  0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+  25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+  50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+  75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+  100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+}
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+    padding: 2em;
+    height: auto;
+  }
+
+  .credit-card {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .branding img {
+    width: 30px;
+  }
+
+  .card-back .visa-logo {
+    width: 30px;
+  }
+
+  .wrapper button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  .wrapper input {
+    padding: 0.8em 0.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    height: 500px;
+    width: 95%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .credit-card {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 7rem;
+  }
+
+  .card-number,
+  .details {
+    font-size: 0.7em;
+  }
+
+  .branding img {
+    width: 25px;
+  }
+
+  .card-back .visa-logo {
+    width: 25px;
+  }
+
+  .wrapper button {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .wrapper input {
+    padding: 0.7em 0.3em;
+  }
+}
+
+@media (max-width: 340px) {
+ 
+  .wrapper {
+    width: 85%;
+  }
+
+  .layer {
+    height: 110vh;
+  }
+
+}

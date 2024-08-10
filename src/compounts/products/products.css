@@ -1,0 +1,205 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 20px;
+  margin-top: 2rem;
+}
+
+.productsunit {
+  width: 350px;
+  height: 350px;
+  border-radius: 2px;
+  position: relative;
+  cursor: grab;
+  background-color: lightcyan;
+}
+
+.bg {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.productsunit img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 20;
+  position: relative;
+}
+
+.pro_icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  margin: 0 auto;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: 30;
+}
+
+.pro_icons button {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.pro_icons svg {
+  background: white;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid grey;
+}
+
+.pro_icons svg:hover {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.productsunit:hover .pro_icons {
+  opacity: 1;
+}
+
+.pro_icons button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.alert_logout {
+  position: fixed;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  transform: translate(-25%, -50%);
+  animation: all 3s ease-in-out;
+}
+
+.alert_logout h2 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.alert_logout p {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.alert_logout a {
+  display: inline-flex;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.alert_logout a:hover {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+.heart-icon {
+  position: relative;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.heart-icon .animate::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 48px;
+  animation: pulse 0.6s ease-out, fly 0.6s ease-out;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-200%, -200%) scale(2);
+  }
+}
+
+.heart-burst {
+  position: absolute;
+  pointer-events: none;
+  top: -50px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.heart-burst .heart {
+  position: absolute;
+  font-size: 24px;
+  color: red;
+  animation: burst 1s ease-out;
+}
+
+@keyframes burst {
+  0% {
+    transform: scale(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(-50px);
+    opacity: 0;
+  }
+}

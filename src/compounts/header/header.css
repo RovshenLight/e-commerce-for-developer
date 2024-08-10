@@ -1,0 +1,222 @@
+.header {
+  display: flex;
+  overflow: hidden;
+  max-width: 1320px;
+  margin: 0 auto;
+  border-radius: 2px;
+  
+}
+
+.header_container {
+  display: flex;
+  transition: transform 1s ease;
+  width: 100%;
+  border-radius: 2px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex: 1 0 100%;
+}
+
+header .left {
+  flex: 1;
+  padding-left: 5rem;
+}
+
+header .right {
+  flex: 1;
+
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,0,0,0.1);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 30%;
+  z-index: 5;
+}
+
+.prev svg, .next svg {
+  display: inline-block;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.prev {
+  left: 25px;
+}
+
+.next {
+  right: 25px;
+}
+
+.left h1 {
+  font-size: 5rem;
+}
+
+.left button {
+  display: inline-block;
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 500;
+}
+
+.left button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.right {
+  position: relative;
+}
+
+.right_bg {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  transform: translate(-25%);
+  border-radius: 10%;
+  width: 400px;
+  height: 400px;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width:1350px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width:1100px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width:900px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 350px;
+    height: 350px;
+  }
+  header {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:768px) {
+  
+.prev, .next {
+  display: none;
+}
+.left h1 {
+  font-size: 3rem;
+}
+
+}
+@media screen and (max-width:650px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 250px;
+    height: 250px;
+  }
+  .left button {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media screen and (max-width:480px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .left h1 {
+    font-size: 1.8rem;
+  }
+  .left h2 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+}
+@media screen and (max-width:350px) {
+  .right_bg {
+    top: 25%;
+    right: 20%;
+    transform: translate(-25%);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .left h1 {
+    font-size: 1.8rem;
+  }
+  .left p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+}

@@ -1,0 +1,163 @@
+.regist {
+  background:linear-gradient(
+  rgba(255, 255, 255, 0.5),
+  rgba(255, 255, 255, 0.5)
+), url('../../assets/regist.jpg') center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+.regist_inner {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+}
+
+.regist_inner h1 {
+  margin: 1rem
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.regist_inner input {
+  display: flex;
+  margin: 0 10px;
+  width: 100%;
+  height: 40px;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.form_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.form_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.regist_inner form p {
+  margin: 1rem 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.regist_inner span {
+  font-weight: 600;
+}
+
+.regist_inner button {
+  display: flex;
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.6rem 5rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.regist_inner button:hover {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.regist a {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 20px 0 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .regist_inner {
+    width: 60%;
+  }
+
+  .regist_inner input {
+    width: 100%;
+  }
+
+  .regist_inner button {
+    padding: 0.6rem 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .regist_inner {
+    width: 80%;
+  }
+
+  .regist_inner input {
+    width: 100%;
+  }
+
+  .regist_inner h1 {
+    font-size: 1.5rem;
+  }
+
+  .regist_inner form p {
+    font-size: 1rem;
+  }
+
+  .regist_inner button {
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .regist_inner {
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .regist_inner input {
+    width: 100%;
+    height: 35px;
+  }
+
+  .regist_inner button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .form {
+    flex-direction: column;
+  }
+
+  .form_left {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .form_right {
+    align-items: center;
+  }
+}

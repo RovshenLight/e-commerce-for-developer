@@ -1,0 +1,33 @@
+.fillters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.productslist>h1 {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.fillters select {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 2px;
+}
+
+.fillters  span {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width:620px) {
+  .fillters {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:380px) {
+  .fillters {
+    flex-direction: row;
+  }
+}

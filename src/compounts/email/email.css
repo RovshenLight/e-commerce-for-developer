@@ -1,0 +1,100 @@
+.email {
+  width: 100%;
+  height: 300px;
+  background: thistle;
+  margin-top: 2rem;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.email_title h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.email_input {
+  display: flex;
+  width: 50%;
+  height: 40px;
+}
+
+.email_input input {
+  outline: none;
+  flex: 8;
+  border: 1px solid black;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.email button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 7px 0;
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 500;
+  flex: 2;
+  height: 100%;
+}
+
+
+.email button:hover {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes send-icon-animation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.email button:hover svg {
+  animation: send-icon-animation .8s ease-in-out infinite;
+}
+
+@media screen and (max-width:870px) {
+  .email_title h1 {
+    font-size: 3rem;
+  }
+
+  .email {
+    height: 250px;
+  }
+}
+@media screen and (max-width:670px) {
+  .email_title h1 {
+    font-size: 2rem;
+  }
+
+  .email {
+    height: 200px;
+  }
+}
+@media screen and (max-width:460px) {
+  .email_title h1 {
+    font-size: 1.5rem;
+  }
+
+  .email {
+    height: 200px;
+  }
+}

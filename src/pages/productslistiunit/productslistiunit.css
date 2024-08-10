@@ -1,0 +1,139 @@
+.prolistunit {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 20px;
+}
+
+.prolistunit .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.prolistunit img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.prolistunit .cont h1 {
+  font-size: 3rem;
+}
+
+.prolistunit .cont p {
+  margin-top: 1rem;
+  line-height: 140%;
+  word-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+.prolistunit .cont>span {
+  margin-top: 1rem;
+  font-size: 4rem;
+}
+
+.pro_unit_select {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.pro_unit_colors {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.pro_unit_colors select {
+  margin-left: 0.5rem;
+  padding: 1px;
+  font-size: 1.3rem;
+}
+
+.pro_unit_counts {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pro_unit_bag {
+  font-size: 2rem;
+}
+
+.pro_unit_bag>button {
+  display: inline-flex;
+  border: 1px solid black;
+  font-size: 1.2rem;
+  padding: 0 10px 4px 10px;
+  margin: 0 1rem;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.pro_unit_bag>span {
+  vertical-align: middle;
+}
+
+.pro_unit_select button {
+  display: inline-block;
+  border: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 500;
+}
+
+.pro_unit_select button:hover {
+  background: linear-gradient(300deg, lightblue,violet, lightcyan);
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+}
+
+.pro_unit_color {
+  display: inline-flex;
+  align-items: center;
+  justify-self: center;
+  margin: 0 0 0 8px;
+  background-color: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.alert_colors p {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 10px;
+  color: black;
+  border-radius: 2px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width:1030px) {
+  .prolistunit {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:760px) {
+  .pro_unit_select {
+    width: 49%;
+  }
+}
+@media screen and (max-width:500px) {
+  .pro_unit_select {
+    width: 75%;
+  }
+}
