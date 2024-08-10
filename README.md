@@ -31,9 +31,9 @@ Before run this App you should past it in Second Terminl( VSCode ). <br />
 ![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=gruvbox)
 
 ###
-
-<img src="https://raw.githubusercontent.com/RovshenLight/RovshenLight/output/snake.svg" alt="Snake animation" />
-
+<div align="center">
+<img src="https://raw.githubusercontent.com/RovshenLight/RovshenLight/output/snake.svg" align="center" style="width: 100%" />
+</div>
 ###
 
 ---
