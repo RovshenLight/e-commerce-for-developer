@@ -1,6 +1,17 @@
-Before run this App you should past it ( npx json-server --watch src/data/database.json --port 8000 ) in Second Terminl( VSCode ). <br />
+
+# Project
+
 If you user, you can look preview ( ( https://rovshenlight.github.io/e-commerce-for-users/ ) <- For Users )
 
+## Installation
+
+Before run this App you should past it in Second Terminl( VSCode ). <br />
+
+```bash
+  npx json-server --watch src/data/database.json --port 8000
+```
+    
+## 
 
 
 <div align="center">
